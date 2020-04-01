@@ -1,0 +1,31 @@
+{
+  "name": "ts-path-alias",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "nodemon --watch src --ext ts --exec ts-node src/index",
+    "lint": "eslint --ext ts .",
+    "fix": "eslint --ext ts --fix ."
+  },
+  "lint-staged": {
+    "*.{js,ts}": "eslint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-mouse": "mouse484/eslint-config",
+    "prettier": "^2.0.2",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "nodemon": "^2.0.2",
+    "typescript": "^3.8.3",
+    "@types/node": "^13.9.8",
+    "ts-node": "^8.8.1",
+    "@typescript-eslint/eslint-plugin": "^2.26.0",
+    "@typescript-eslint/parser": "^2.26.0"
+  }
+}
